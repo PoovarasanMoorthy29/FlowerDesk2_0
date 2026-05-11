@@ -10,10 +10,10 @@ public class User {
     private String department;
     private String designation;
     private String role;
-    private String status;
+
 
     public User(String employeeID, String fullName, String userName, String email, String password, String phoneNumber,
-                String department, String designation, String role, String status) {
+                String department, String designation, String role) {
         this.employeeID = employeeID;
         this.fullName = fullName;
         this.userName = userName;
@@ -23,7 +23,7 @@ public class User {
         this.department = department;
         this.designation = designation;
         this.role = role;
-        this.status = status;
+
     }
 
     public String getEmployeeID() {
@@ -62,7 +62,5 @@ public class User {
         return role;
     }
 
-    public String getStatus() {
-        return status;
-    }
+
 }

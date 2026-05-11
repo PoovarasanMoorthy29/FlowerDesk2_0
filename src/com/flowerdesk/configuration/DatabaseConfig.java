@@ -8,9 +8,16 @@ public class DatabaseConfig {
     private static final String URL="jdbc:mysql://localhost:3306/FlowerDesk";
     private static final String USER_NAME="root";
     private static final String PASSWORD="Aadhi@123";
+    private static Connection connection=null;
 
     public static Connection getConnection()throws SQLException {
-        return DriverManager.getConnection(URL,USER_NAME,PASSWORD);
+        if(connection ==null){
+            connection=DriverManager.getConnection(URL,USER_NAME,PASSWORD);
+            return connection;
+
+        }
+        return connection;
+
     }
 
 }

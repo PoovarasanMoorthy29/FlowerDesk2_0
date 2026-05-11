@@ -31,6 +31,6 @@ public class Validation {
         if(role==null){
             return false;
         }
-        else return role.equals("u") || role.equals("a");
+        else return role.equalsIgnoreCase("u") || role.equalsIgnoreCase("a");
     }
 }

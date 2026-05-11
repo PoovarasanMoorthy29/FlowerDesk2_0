@@ -1,22 +1,21 @@
 package com.flowerdesk.model;
 
 public class Tickets {
-    private String ticketID;
+    private String userName;
     private String title;
     private String description;
     private String priority;
-    private String status;
 
-    public Tickets(String ticketID, String description, String title, String priority, String status) {
-        this.ticketID = ticketID;
-        this.description = description;
+    public Tickets(String userName, String title, String description, String priority) {
+        this.userName = userName;
         this.title = title;
+        this.description = description;
         this.priority = priority;
-        this.status = status;
     }
 
-    public String getTicketID() {
-        return ticketID;
+
+    public String getUserName(){
+        return userName;
     }
 
     public String getTitle() {
@@ -31,7 +30,4 @@ public class Tickets {
         return priority;
     }
 
-    public String getStatus() {
-        return status;
-    }
 }
