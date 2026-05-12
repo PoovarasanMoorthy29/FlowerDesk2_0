@@ -32,8 +32,8 @@ public class TicketDAO {
         try (Connection conn = DatabaseConfig.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1,username);
-            ps.setLong(2,id);
+            ps.setLong(1,id);
+            ps.setString(2,username);
             int res=ps.executeUpdate();
             return res>0;
 
