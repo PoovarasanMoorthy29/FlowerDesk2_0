@@ -8,9 +8,9 @@ public class ItAgentDashBoardController {
     private final TicketServices services;
     private final ItAgentDashBoardView itAgentDashBoardView;
 
-    public ItAgentDashBoardController(TicketServices services, ItAgentDashBoardView itAgentDashBoardView) {
-        this.services = services;
-        this.itAgentDashBoardView = itAgentDashBoardView;
+    public ItAgentDashBoardController() {
+        this.services = new TicketServices();
+        this.itAgentDashBoardView =new ItAgentDashBoardView();
     }
 
     public void init() {

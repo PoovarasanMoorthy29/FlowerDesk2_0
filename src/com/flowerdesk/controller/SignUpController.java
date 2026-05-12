@@ -9,9 +9,11 @@ public class SignUpController {
     private final SignUpView signView;
     private final SignUpService signService;
 
-    public SignUpController(SignUpView view, SignUpService service) {
-        this.signView = view;
-        this.signService = service;
+
+
+    public SignUpController() {
+        this.signView =new SignUpView();
+        this.signService = new SignUpService();
     }
 
     public void init() {

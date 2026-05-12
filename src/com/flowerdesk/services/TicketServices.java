@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class TicketServices {
     private final TicketDAO ticketDAO;
-    public TicketServices(TicketDAO dao){
-        this.ticketDAO=dao;
+    public TicketServices(){
+        this.ticketDAO=new TicketDAO();
     }
 
     public boolean deleteTicket(String username,long id) throws SQLException {

@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class LoginService {
     private final LoginDAO loginDAO;
-    public LoginService(LoginDAO dao){
-        this.loginDAO=dao;
+    public LoginService(){
+        this.loginDAO=new LoginDAO();
     }
 
     public boolean checkCredentials(String userName, String password,String role)throws SQLException {

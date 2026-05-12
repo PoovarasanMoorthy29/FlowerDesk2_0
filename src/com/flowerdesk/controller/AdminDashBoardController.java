@@ -9,9 +9,9 @@ public class AdminDashBoardController {
     private AdminDashBoardView view;
     private TicketServices services;
 
-    public AdminDashBoardController(AdminDashBoardView view, TicketServices services) {
-        this.view = view;
-        this.services = services;
+    public AdminDashBoardController() {
+        this.view = new AdminDashBoardView();
+        this.services = new TicketServices();
     }
 
     public void init(){

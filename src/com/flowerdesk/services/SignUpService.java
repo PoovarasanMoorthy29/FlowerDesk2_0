@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class SignUpService {
     private final RegistrationDAO regDAO;
-    public SignUpService(RegistrationDAO dao) {
-        this.regDAO = dao;
+    public SignUpService() {
+        this.regDAO = new RegistrationDAO();
     }
 
     public boolean saveUser(String employeeID, String fullName, String userName, String email, String password,

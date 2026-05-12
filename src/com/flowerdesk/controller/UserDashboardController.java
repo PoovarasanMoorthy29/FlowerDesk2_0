@@ -10,9 +10,9 @@ public class UserDashboardController {
     private final UserDashBoardView view;
     private final TicketServices services;
 
-    public UserDashboardController(UserDashBoardView view, TicketServices services) {
-        this.view = view;
-        this.services = services;
+    public UserDashboardController() {
+        this.view = new UserDashBoardView();
+        this.services = new TicketServices();
     }
     public  void init(){
         try{

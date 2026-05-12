@@ -8,17 +8,11 @@ import java.sql.SQLException;
 public class LoginController {
     private final LoginView loginView;
     private final LoginService loginService;
-    private final UserDashboardController userControl;
-    private final AdminDashBoardController adminControl;
-    private final ItAgentDashBoardController itControl;
 
-    public LoginController(LoginView view, LoginService service,UserDashboardController control
-            ,ItAgentDashBoardController itControl,AdminDashBoardController adminControl) {
-        this.loginView = view;
-        this.loginService = service;
-        this.userControl=control;
-        this.itControl=itControl;
-        this.adminControl=adminControl;
+    public LoginController() {
+        this.loginView = new LoginView();
+        this.loginService = new LoginService();
+
     }
 
     public void init() {
@@ -32,14 +26,17 @@ public class LoginController {
         try{
             if(loginService.checkCredentials(userName,password,role)){
                 if(role.equalsIgnoreCase("U")){
+                    UserDashboardController userControl=new UserDashboardController();
                     userControl.init();
 
                 }
                 else if(role.equalsIgnoreCase("Admin")){
+                    AdminDashBoardController adminControl=new AdminDashBoardController();
                     adminControl.init();
 
                 }
                 else{
+                    ItAgentDashBoardController itControl=new ItAgentDashBoardController();
                     itControl.init();
                 }
             }
